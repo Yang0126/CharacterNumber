@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str = 'jksaiawqajlkwsauiahweyinsjkx'
+    let [obj, maxNum, count] = [{}, 0, 0]
+    for (let i = 0, len = str.length; i < len; i++) {
+      if (!obj[str[i]]) {
+        obj[str[i]] = 1
+      } else {
+        obj[str[i]]++
+      }
+    }
+    console.log(obj)
+    for (let j in obj) {
+      if (maxNum < obj[j]) {
+        maxNum = obj[j]
+        count = j
+      }
+    }
+    console.log(maxNum,count)
+  </script>
+</body>
+</html>
